@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+    <link rel="stylesheet" href="./style.css">
+    <title>Live Weather Application</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src ="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <div class="Main">
+        <!-- <div class="SideNav">
+            <br><i>Wea</i>
+            <br><br><br><br>
+            <i class="fa fa-dashboard" style="color: white;"></i>
+            <i class="fa fa-map" style="color: white;"></i>
+            <i class="fa-solid fa-location-dot" style="color: white;"></i> <br>
+            <i class="fa fa-signal" style="color: white;"></i>
+            <i class="fa fa-calendar" style="color: white;"></i>
+            <i class="fa fa-gear" style="color: white;"></i>
+        </div> -->
+        <div class="MainDashboard" id="MainDashboard">
+            <button onclick="getLocation()"><i class="fa-solid fa-location-dot"></i></button>
+            <div id="location"></div>
+            <form onsubmit="getLiveWeather(); return false">
+                <input id="UserInput" type="search" placeholder="Search here ..." >
+                <i class="fa fa-search"></i>
+            </form>
+            <h2 class="city">Weather </h2>
+            <div id="temp"></div>
+            <br>
+            <!-- <div id="location" style="color: white;"><i class="fa-solid fa-location-dot" style="color: white;"></i></div>
+            <div id="calander" style="color: white;"><i class="fa fa-calendar" style="color: white;"></i></div> -->
+        </div>
+        <div class="TodaysHighlight">
+            <h3>Today's Highlight</h3>
+            <div class="FirstRow">
+                <div class="WindStatus" id="WindStatus">
+                    <span>Wind Status</span>
+                    <!-- <br><br>
+                    <canvas id="Can-WindStatusChart"></canvas> -->
+                </div>
+                <div class="UVIndex" id="UVIndex">
+                    <span>UV Index</span>
+                    <!-- <div id="gauge2" class="gauge-container two"></div> -->
+                </div>
+                <div class="SunriseSunset" id="SunriseSunset">
+                    <span>Sunrise and Sunset</span>
+                    <br><br>
+                    <!-- <canvas id="Can-SunriseSunset"></canvas> -->
+                </div>
+            </div>
+            <div class="SecondRow">
+                <div class="Humidity" id="Humidity">
+                    <span>Humidity</span>
+                </div>
+                <div class="Visibility" id="Visibility">
+                    <span>Visibility</span>
+                </div>
+                <div class="FeelsLike" id="FeelsLike">
+                    <span>Feels Like</span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>   
+</html>

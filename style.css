@@ -1,0 +1,160 @@
+.Main {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    border-radius: 20px;
+    background-color: rgb(20, 20, 20);
+ }
+/*
+ .SideNav {
+    margin: 20px;
+    padding: 20px;
+    max-width: 30px;
+    border-radius: 20px;
+    background-color: rgb(80, 80, 80);
+    color: white;
+}
+.SideNav > i {
+    align-content: center;
+    margin-bottom: 50px;
+    padding: 5px;
+} */
+.MainDashboard {
+    width: 350px;
+    height: 550px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+.MainDashboard> form{
+    position: relative;
+    top: 5%;
+    left: 100%;
+    transform: translate(-100%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 4px solid white;
+    padding: 5px;
+}
+
+input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.fa{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+form:hover{
+    width: 300px;
+    cursor: pointer;
+}
+
+form:hover input{
+    display: block;
+}
+
+form:hover .fa{
+    background: #07051a;
+    color: white;
+}
+.TodaysHighlight {
+    margin: 20px;
+    padding: 20px;
+    height: 550px;
+    width: 870px;
+    border-radius: 20px;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.TodaysHighlight > .FirstRow {
+    display: flex;
+    flex-direction: column;
+    flex-flow: row;
+    height: 300px;
+
+}
+.TodaysHighlight > .SecondRow {
+    display: flex;
+    flex-direction: column;
+    flex-flow: row;
+    height: 150px;
+}
+
+.TodaysHighlight > .FirstRow> .WindStatus, .UVIndex, .SunriseSunset{
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+    border-radius: 20px;
+    background-color: rgb(35, 35, 35);
+}
+.TodaysHighlight > .SecondRow> .Humidity, .Visibility, .FeelsLike{
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+    border-radius: 20px;
+    background-color: rgb(35, 35, 35);
+}
+
+/* This Code is UV Gauge Meter */
+.chartjs-wrapper {
+    margin: 0 auto;
+    width: 32vw;
+    height: auto;
+    padding: 20px;
+  }
+/* Adjust Font Size */
+.font-50pt{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 50pt;
+
+}
+.font-25pt {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 25pt;
+}
+.font-15pt {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 15pt;
+}
+h1, h2, h3, h4, h5, h6, span, .FeelsLike, .Humidity, .MainDashboard, .SunriseSunset, .UVIndex, .Visibility, .WindStatus  {
+    font-family: 'Noto Sans', sans-serif;
+    color: whitesmoke;
+}
